@@ -1,0 +1,12 @@
+pip install streamlit
+pip install requests
+pip install beautifulsoup4
+pip install transformers
+pip install torch
+pip install konlpy
+pip install scikit-learn
+한 후에
+app.py파일 저장
+streamlit run app.py
+하면 끝
+현재 요약과 키워드가 안나와서 app.py파일 챗gpt와 수정중
