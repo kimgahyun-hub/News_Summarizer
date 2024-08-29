@@ -9,7 +9,7 @@
 +가능하다면 뉴스의 댓글도 분석해서 사람들의 반응 탐색(긍정적과 부정적의 비율로 보이게)
 
 
-*News Crawling(뉴스 데이터 수집) 
+▶News Crawling(뉴스 데이터 수집) 
 
 -출처: 구글
 
@@ -18,7 +18,7 @@
 -인기 기사 선정 기준 정하기: 헤드라인 뉴스 중 5개 선정
 
 
-*AI Model
+▶AI Model
 
 -Summary Model
 
@@ -27,7 +27,7 @@
 -Openai, Chat GPT, Hugging Face 라이브러리 제공 모델등을 사용
 
 
-*Data Format
+▶Data Format
 
 -뉴스 카테고리 선택
 
@@ -40,7 +40,7 @@
 -결과 시각화(출력)
 
 
-*System Realization
+▶System Realization
 
 -사용자가 카테고리를 선택하고 결과를 확인할 수 있는 웹 또는 모바일 인터페이스를 설계
 
