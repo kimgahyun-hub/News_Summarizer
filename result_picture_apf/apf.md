@@ -28,8 +28,14 @@ http://localhost:11434이 주소에서 실행 중인지 확인
 
 데이터를 저장하고(뉴스 정보들) 이를 전송하기 위한 json
 
-웹사이트 크롤링을 위한 BeautifulSoup
-
+웹사이트 크롤링을 위한 BeautifulSoup 가 사용됨
+    
+'''
+import streamlit as st
+import requests
+import json
+from bs4 import BeautifulSoup
+'''
    
 
 
