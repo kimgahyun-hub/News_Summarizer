@@ -36,7 +36,20 @@ import requests
 import json
 from bs4 import BeautifulSoup
 ```
-   
 
+API
+-------------
+네이버 뉴스에서 크롤링을 진행
 
+```
+client_id = 'client_id'
+client_secret = 'client_secret' // your_Api use
+url = 'https://openapi.naver.com/v1/search/news.json' //API request url
+```
+
+Ollama api를 사용하여 진행
+
+```
+ollama_base_url = 'http://localhost:11434'
+```
 
