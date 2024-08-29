@@ -7,5 +7,6 @@ News_Summarize another version
 Useage
 -------------
 먼저 Ollama가 사용하는 pc에 설치 되어 있어야함
+
 Ollama : <https://ollama.com/>
 Ollama github : <https://github.com/ollama/ollama>
