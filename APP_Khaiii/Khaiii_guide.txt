@@ -1,6 +1,5 @@
 #JVM 문제 발생하는 'konlpy' 대신 'Khaiii' 형태소 분석기 사용
 #JVM에 의존하지 않지만 대신 퀄리티가 떨어지고 더 오래걸림
-#랙도 걸림,,
 
 pip install streamlit requests beautifulsoup4 transformers torch scikit-learn
 
