@@ -13,11 +13,11 @@ Ollama github : <https://github.com/ollama/ollama>
 
 pc상에서 ollama 시작(여기서 llama3.1:8b 버전 사용):
   
-  ollama run llama3.1:3b
+    ollama run llama3.1:3b
 
 
 http://localhost:11434이 주소에서 실행 중인지 확인
 
-  Ollama is running
+    Ollama is running
 
 이 문자이 나오면 실행 중 
