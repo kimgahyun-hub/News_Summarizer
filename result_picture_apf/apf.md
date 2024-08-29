@@ -21,3 +21,16 @@ http://localhost:11434이 주소에서 실행 중인지 확인
     Ollama is running
 
 이 문자이 나오면 실행 중 
+
+파이썬 기반의 웹어플리케이션을 만들기 위한 streamlit
+
+웹사이트 요청을 위한 requests
+
+데이터를 저장하고(뉴스 정보들) 이를 전송하기 위한 json
+
+웹사이트 크롤링을 위한 BeautifulSoup
+
+   
+
+
+
