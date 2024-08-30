@@ -44,8 +44,9 @@ import re
 네이버 API 키 설정
 -------------
 
--client_id와 client_secret: 네이버에서 제공하는 API 키입니다. 실제 실행 시에는 네이버 개발자 센터에서 발급받은 API 키를 입력해야 합니다.
--url: 네이버 뉴스 검색 API의 엔드포인트입니다.
+-client_id와 client_secret: 네이버에서 제공하는 API 키입니다. 실제 실행 시에는 네이버 개발자 센터에서 발급받은 API 키를 입력해야 ㅎ한다
+
+-url: 네이버 뉴스 검색 API의 엔드포인트
 
 <pre>
 <code>
@@ -58,9 +59,11 @@ url = 'https://openapi.naver.com/v1/search/news.json'
 모델 및 토크나이저 설정
 -------------
 
--model_name: 한국어 텍스트 요약을 위해 사전 훈련된 T5 모델의 이름입니다.
--AutoTokenizer 및 AutoModelForSeq2SeqLM: 해당 모델과 토크나이저를 로드하여 요약 작업을 수행할 수 있도록 설정합니다.
--pipeline: 요약 작업을 수행할 파이프라인을 정의합니다.
+-model_name: 한국어 텍스트 요약을 위해 사전 훈련된 T5 모델의 이름
+
+-AutoTokenizer 및 AutoModelForSeq2SeqLM: 해당 모델과 토크나이저를 로드하여 요약 작업을 수행할 수 있도록 설정
+
+-pipeline: 요약 작업을 수행할 파이프라인을 정의합
 
 <pre>
 <code>
@@ -91,13 +94,13 @@ categories = {
 기사 내용 추출
 -------------
 
--extract_text_from_url(url): 주어진 URL에서 기사 내용을 추출하는 함수입니다.
+-extract_text_from_url(url): 주어진 URL에서 기사 내용을 추출하는 함수
 
--requests.get(url): HTTP GET 요청을 보내 웹페이지의 콘텐츠를 가져옵니다.
+-requests.get(url): HTTP GET 요청을 보내 웹페이지의 콘텐츠를 가져온다
 
 -BeautifulSoup: HTML 문서를 파싱하여 텍스트를 추출합니다. script와 style 태그는 제거하여 가독성을 높입니다.
 
--예외 처리: 요청이 실패한 경우 빈 문자열을 반환합니다.
+-예외 처리: 요청이 실패한 경우 빈 문자열을 반환
 
 <pre>
 <code>
@@ -120,13 +123,13 @@ def extract_text_from_url(url):
 키워드 추출
 -------------
 
--extract_keywords(text, num_keywords=5): 주어진 텍스트에서 주요 키워드를 추출하는 함수입니다.
+-extract_keywords(text, num_keywords=5): 주어진 텍스트에서 주요 키워드를 추출하는 함수
 
--정규 표현식: 텍스트에서 한글과 공백 이외의 문자를 제거합니다.
+-정규 표현식: 텍스트에서 한글과 공백 이외의 문자를 제거
 
--Okt: 텍스트에서 명사만을 추출합니다.
+-Okt: 텍스트에서 명사만을 추출
 
--TF-IDF: 명사들 중에서 중요한 키워드를 추출하기 위해 TF-IDF 알고리즘을 사용합니다.
+-TF-IDF: 명사들 중에서 중요한 키워드를 추출하기 위해 TF-IDF 알고리즘을 사용
 
 <pre>
 <code>
@@ -151,16 +154,25 @@ def extract_keywords(text, num_keywords=5):
 Streamlit 애플리케이션
 -------------
 
--st.title: 애플리케이션의 제목을 설정합니다.
--st.selectbox: 사용자가 카테고리를 선택할 수 있는 드롭다운 메뉴를 제공합니다.
--st.button: 버튼을 클릭하면 뉴스 검색, 요약, 키워드 추출 작업이 수행됩니다.
--with st.spinner: 뉴스 검색 중일 때 로딩 스피너를 표시합니다.
+-st.title: 애플리케이션의 제목을 설정
+
+-st.selectbox: 사용자가 카테고리를 선택할 수 있는 드롭다운 메뉴를 제공
+
+-st.button: 버튼을 클릭하면 뉴스 검색, 요약, 키워드 추출 작업이 수행.
+
+-with st.spinner: 뉴스 검색 중일 때 로딩 스피너를 표시
+
 -params: 네이버 뉴스 검색 API에 보낼 쿼리 파라미터를 설정합니다. 여기서는 선택된 카테고리로 최신 뉴스 5개를 가져옵니다.
--headers: API 요청에 필요한 헤더를 설정합니다.
--API 요청 및 예외 처리: 뉴스 검색 API 요청을 보내고, 결과를 JSON 형태로 받아옵니다. 예외가 발생할 경우, 오류 메시지를 출력합니다.
--기사 정보 출력: 검색된 각 뉴스 기사에 대해 제목, URL, 발행일을 출력합니다.
--기사 텍스트 추출: 기사 내용이 성공적으로 추출되면, 요약 및 키워드 추출 기능을 수행합니다.
--st.write: 요약된 내용과 추출된 키워드를 화면에 출력합니다.
+
+-headers: API 요청에 필요한 헤더를 설정
+
+-API 요청 및 예외 처리: 뉴스 검색 API 요청을 보내고, 결과를 JSON 형태로 받아옵니다. 예외가 발생할 경우, 오류 메시지를 출력
+
+-기사 정보 출력: 검색된 각 뉴스 기사에 대해 제목, URL, 발행일을 출력
+
+-기사 텍스트 추출: 기사 내용이 성공적으로 추출되면, 요약 및 키워드 추출 기능을 수행
+
+-st.write: 요약된 내용과 추출된 키워드를 화면에 출력
 
 <pre>
 <code>
