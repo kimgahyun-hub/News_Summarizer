@@ -1,4 +1,4 @@
-News_Summarize another version
+News_Summarize Use Ollama
 =============
 
 Streamlit이라는 파이썬 웹 애플리케이션 프레임워크를 사용하여 뉴스 기사를 검색하고, 해당 기사 내용을 요약하고 번역하는 애플리케이션을 만드는 코드
