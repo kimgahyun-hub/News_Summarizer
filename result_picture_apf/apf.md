@@ -285,7 +285,7 @@ translate_response = requests.post(
 #### JSON 응답 처리 및 번역 요청 
 과 동일한 코드 사용
 
-## 추가된 코드
+### 추가된 코드
 
 마지막 최종 결과 출력을 위한 코드 구현
 
