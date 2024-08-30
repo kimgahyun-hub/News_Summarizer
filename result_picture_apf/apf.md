@@ -8,10 +8,10 @@ Useage
 먼저 Ollama가 사용하는 pc에 설치 되어 있어야함
 
 여기서 Ollama 설치
-  Ollama : <https://ollama.com/>
+        Ollama : <https://ollama.com/>
 
 이 사이트 참고하여 llama3.1을 실행한다
-  Ollama github : <https://github.com/ollama/ollama>
+        Ollama github : <https://github.com/ollama/ollama>
 
 pc상에서 ollama 시작(여기서 llama3.1:8b 버전 사용):
   
