@@ -30,6 +30,7 @@ Oracle Java : <https://www.oracle.com/kr/java/technologies/downloads/>
 -re: 정규 표현식을 사용하기 위한 라이브러리로, 텍스트 처리에 사용.
 
 ```
+
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
@@ -47,9 +48,11 @@ import re
 -url: 네이버 뉴스 검색 API의 엔드포인트입니다.
 
 '''
+
 client_id = 'YOUR_CLIENT_ID'
 client_secret = 'YOUR_CLIENT_SECRET'
 url = 'https://openapi.naver.com/v1/search/news.json'
+
 '''
 
 모델 및 토크나이저 설정
@@ -60,6 +63,7 @@ url = 'https://openapi.naver.com/v1/search/news.json'
 -pipeline: 요약 작업을 수행할 파이프라인을 정의합니다.
 
 ```
+
 model_name = "lcw99/t5-base-korean-text-summary"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
@@ -71,6 +75,7 @@ summarizer = pipeline("summarization", model=model, tokenizer=tokenizer)
 -------------
 
 '''
+
 categories = {
     '경제': '경제',
     'IT': 'IT',
@@ -80,6 +85,7 @@ categories = {
     '스포츠': '스포츠',
     '건강': '건강'
 }
+
 '''
 
 
@@ -94,7 +100,9 @@ categories = {
 
 -예외 처리: 요청이 실패한 경우 빈 문자열을 반환합니다.
 
+
 '''
+
 def extract_text_from_url(url):
     try:
         response = requests.get(url)
@@ -110,15 +118,20 @@ def extract_text_from_url(url):
         return ""
 '''
 
+
 키워드 추출
 -------------
 
 -extract_keywords(text, num_keywords=5): 주어진 텍스트에서 주요 키워드를 추출하는 함수입니다.
+
 -정규 표현식: 텍스트에서 한글과 공백 이외의 문자를 제거합니다.
+
 -Okt: 텍스트에서 명사만을 추출합니다.
+
 -TF-IDF: 명사들 중에서 중요한 키워드를 추출하기 위해 TF-IDF 알고리즘을 사용합니다.
 
 '''
+
 def extract_keywords(text, num_keywords=5):
     text = re.sub(r'[^ㄱ-ㅎㅏ-ㅣ가-힣\s]', '', text)
     okt = Okt()
@@ -134,6 +147,7 @@ def extract_keywords(text, num_keywords=5):
     sorted_items = sorted(zip(vectorizer.idf_, feature_names))
     keywords = [item[1] for item in sorted_items[:num_keywords]]
     return keywords
+    
 '''
 
 Streamlit 애플리케이션
@@ -151,6 +165,7 @@ Streamlit 애플리케이션
 -st.write: 요약된 내용과 추출된 키워드를 화면에 출력합니다.
 
 '''
+
 st.title('뉴스 요약 및 키워드 추출기')
 
 user_choice = st.selectbox("카테고리를 선택하세요:", list(categories.keys()))
@@ -203,6 +218,7 @@ if st.button('뉴스 요약 및 키워드 추출'):
                 st.write("뉴스를 가져오는데 실패했습니다.")
         except requests.exceptions.RequestException as e:
             st.write(f"API 요청 중 오류 발생: {e}")
+            
 '''
 
 보완해야 할 부분
