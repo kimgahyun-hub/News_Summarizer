@@ -13,7 +13,7 @@
 -------------
 
 
-▶뉴스 모델 제작
+✔뉴스 모델 제작
 
 -Jupyter Notebook
 
@@ -21,7 +21,7 @@
 
 -Python
 
-▶UI 구현
+✔UI 구현
 
 -Streamlit
 
