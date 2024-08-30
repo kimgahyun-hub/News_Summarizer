@@ -59,17 +59,17 @@ Architecture
 ============
 
 
-### News Crawler
+## News Crawler
 
 • Source
 
-- 네이버 뉴스 API (free for 25k requests)
+네이버 뉴스 API (free for 25k requests)
 
-### News Analyzer
+## News Analyzer
 
 • html.paser: 구문 분석
 
-### News Summarizer
+## News Summarizer
 
 • 한국어 Tokenizer: 텍스트 -> 문장 분리
 
@@ -77,11 +77,11 @@ Architecture
 
 -t5-base 모델을 로드하여 한국어 텍스트 요약
 
-### Keyword Extractor
+## Keyword Extractor
 
 • Okt(Open Korean Text) & TfidfVectorizer: 텍스트에서 핵심 키워드 추출
 
-### UI Implementation
+## UI Implementation
 
 • konlpy를 사용하여 streamlit으로 웹페이지 구현
 
