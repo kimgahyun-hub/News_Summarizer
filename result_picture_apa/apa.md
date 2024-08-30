@@ -74,8 +74,8 @@ summarizer = pipeline("summarization", model=model, tokenizer=tokenizer)
 카테고리 설정
 -------------
 
-'''
-
+<pre>
+<code>
 categories = {
     '경제': '경제',
     'IT': 'IT',
@@ -85,9 +85,8 @@ categories = {
     '스포츠': '스포츠',
     '건강': '건강'
 }
-
-'''
-
+</code>
+</pre>
 
 기사 내용 추출
 -------------
