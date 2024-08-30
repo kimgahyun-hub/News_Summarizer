@@ -99,9 +99,8 @@ categories = {
 
 -예외 처리: 요청이 실패한 경우 빈 문자열을 반환합니다.
 
-
-'''
-
+<pre>
+<code>
 def extract_text_from_url(url):
     try:
         response = requests.get(url)
@@ -115,9 +114,8 @@ def extract_text_from_url(url):
         return text
     except requests.exceptions.RequestException:
         return ""
-        
-'''
-
+</code>
+</pre>
 
 키워드 추출
 -------------
