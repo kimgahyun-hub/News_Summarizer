@@ -116,6 +116,7 @@ def extract_text_from_url(url):
         return text
     except requests.exceptions.RequestException:
         return ""
+        
 '''
 
 
