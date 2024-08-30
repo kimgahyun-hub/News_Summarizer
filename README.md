@@ -63,7 +63,7 @@ Architecture
 
 • Source
 
-네이버 뉴스 API (free for 25k requests)
+-네이버 뉴스 API (free for 25k requests)
 
 ### News Analyzer
 
