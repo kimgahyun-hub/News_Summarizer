@@ -47,13 +47,13 @@ import re
 -client_id와 client_secret: 네이버에서 제공하는 API 키입니다. 실제 실행 시에는 네이버 개발자 센터에서 발급받은 API 키를 입력해야 합니다.
 -url: 네이버 뉴스 검색 API의 엔드포인트입니다.
 
-'''
-
+<pre>
+<code>
 client_id = 'YOUR_CLIENT_ID'
 client_secret = 'YOUR_CLIENT_SECRET'
 url = 'https://openapi.naver.com/v1/search/news.json'
-
-'''
+</code>
+</pre>
 
 모델 및 토크나이저 설정
 -------------
@@ -63,12 +63,10 @@ url = 'https://openapi.naver.com/v1/search/news.json'
 -pipeline: 요약 작업을 수행할 파이프라인을 정의합니다.
 
 ```
-
 model_name = "lcw99/t5-base-korean-text-summary"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 summarizer = pipeline("summarization", model=model, tokenizer=tokenizer)
-
 ```
 
 카테고리 설정
