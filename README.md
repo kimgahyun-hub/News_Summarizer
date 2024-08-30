@@ -15,11 +15,11 @@
 
 ✔뉴스 모델 제작
 
--Jupyter Notebook
+⚕Jupyter Notebook
 
--Colab
+⚕Colab
 
--Python
+⚕Python
 
 ✔UI 구현
 
