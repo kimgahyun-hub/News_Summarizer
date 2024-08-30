@@ -128,8 +128,8 @@ def extract_text_from_url(url):
 
 -TF-IDF: 명사들 중에서 중요한 키워드를 추출하기 위해 TF-IDF 알고리즘을 사용합니다.
 
-'''
-
+<pre>
+<code>
 def extract_keywords(text, num_keywords=5):
     text = re.sub(r'[^ㄱ-ㅎㅏ-ㅣ가-힣\s]', '', text)
     okt = Okt()
@@ -145,8 +145,8 @@ def extract_keywords(text, num_keywords=5):
     sorted_items = sorted(zip(vectorizer.idf_, feature_names))
     keywords = [item[1] for item in sorted_items[:num_keywords]]
     return keywords
-    
-'''
+</code>
+</pre>
 
 Streamlit 애플리케이션
 -------------
