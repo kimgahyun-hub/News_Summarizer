@@ -1,5 +1,4 @@
-📰News_Summarizer
-=============
+# 📰News_Summarizer
 
 
  :one:Project Introduction 
