@@ -83,7 +83,7 @@
 
 ### Keyword Extractor
 
-✔ Okt(Open Korean Text) & TfidfVectorizer: 텍스트에서 핵심 키워드 추출
+✔ Okt(Open Korean Text): 텍스트에서 핵심 키워드 추출
 
 ### UI Implementation
 
