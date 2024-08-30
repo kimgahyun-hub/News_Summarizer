@@ -1,4 +1,4 @@
-📰News_Summarizer:shipit:
+📰News_Summarizer
 =============
 
 
