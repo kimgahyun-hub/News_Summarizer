@@ -41,6 +41,8 @@
 
 -각 기사의 핵심 키워드 추출
 
+-Ollam를 사용하여 기사 요약과 번역을 진행
+
 -결과 시각화(출력)
 
 
@@ -64,6 +66,8 @@ Architecture
 • Source
 
 -네이버 뉴스 API (free for 25k requests)
+
+-Ollama API
 
 ### News Analyzer
 
