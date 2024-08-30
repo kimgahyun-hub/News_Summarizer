@@ -62,12 +62,14 @@ url = 'https://openapi.naver.com/v1/search/news.json'
 -AutoTokenizer 및 AutoModelForSeq2SeqLM: 해당 모델과 토크나이저를 로드하여 요약 작업을 수행할 수 있도록 설정합니다.
 -pipeline: 요약 작업을 수행할 파이프라인을 정의합니다.
 
-```
+<pre>
+<code>
 model_name = "lcw99/t5-base-korean-text-summary"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 summarizer = pipeline("summarization", model=model, tokenizer=tokenizer)
-```
+</code>
+</pre>
 
 카테고리 설정
 -------------
