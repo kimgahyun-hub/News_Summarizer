@@ -162,8 +162,8 @@ Streamlit 애플리케이션
 -기사 텍스트 추출: 기사 내용이 성공적으로 추출되면, 요약 및 키워드 추출 기능을 수행합니다.
 -st.write: 요약된 내용과 추출된 키워드를 화면에 출력합니다.
 
-'''
-
+<pre>
+<code>
 st.title('뉴스 요약 및 키워드 추출기')
 
 user_choice = st.selectbox("카테고리를 선택하세요:", list(categories.keys()))
@@ -216,8 +216,8 @@ if st.button('뉴스 요약 및 키워드 추출'):
                 st.write("뉴스를 가져오는데 실패했습니다.")
         except requests.exceptions.RequestException as e:
             st.write(f"API 요청 중 오류 발생: {e}")
-            
-'''
+</code>
+</pre>                    
 
 보완해야 할 부분
 -------------
