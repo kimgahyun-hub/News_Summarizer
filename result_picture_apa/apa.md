@@ -1,34 +1,12 @@
 News_Summarize Use Ollama
 =============
 
-![image](./apf3.png)
-
-Streamlit이라는 파이썬 웹 애플리케이션 프레임워크를 사용하여 뉴스 기사를 검색하고, 해당 기사 내용을 요약하고 번역을 Ollama의 llama3.1을 이용하여 진행
+이 프로젝트는 뉴스 기사를 검색하고, 해당 기사의 내용을 요약한 뒤, 주요 키워드를 추출하는 웹 애플리케이션입니다. 사용자는 선택한 카테고리에서 최신 뉴스를 검색하고, 요약된 내용과 주요 키워드를 확인할 수 있습니다. 이 애플리케이션은 Python을 기반으로 Streamlit을 사용하여 개발되었습니다.
 
 Useage
 -------------
-먼저 Ollama가 사용하는 pc에 설치 되어 있어야함
 
-여기서 Ollama 설치
-        Ollama : <https://ollama.com/>
-
-이 사이트 참고하여 llama3.1을 설치 및 실행한다
-        Ollama github : <https://github.com/ollama/ollama>
-
-윈도우 사용시 PowerShell에서 실행한다
-
-pc상에서 ollama 시작(여기서 llama3.1:8b 버전 사용):
-  
-    ollama run llama3.1:3b
-
-
-http://localhost:11434 주소에서 실행 중인지 확인
-
-    Ollama is running
-
-이 문자가 나오면 실행 중 
-
-자바 또한 설치되어 있어야 한다
+자바가 설치되어 있어야 한다
 
 Oracle Java : <https://www.oracle.com/kr/java/technologies/downloads/>
 
@@ -37,18 +15,29 @@ Oracle Java : <https://www.oracle.com/kr/java/technologies/downloads/>
 필요한 라이브러리
 -------------
 
-Streamlit (st): 사용자 인터페이스를 만드는 데 사용되는 라이브러리.
+Streamlit: 웹 애플리케이션을 쉽게 만들기 위한 프레임워크.
 
-Requests (requests): HTTP 요청을 보내기 위한 라이브러리로, 네이버 API와 Ollama API에 요청을 보내기 위해 사용.
+Requests: HTTP 요청을 보내기 위해 사용.
 
-BeautifulSoup (bs4): HTML을 파싱하고 웹 페이지에서 텍스트를 추출하는 데 사용.
+BeautifulSoup: 웹페이지에서 텍스트를 추출하기 위해 사용.
 
-BeautifulSoup (bs4): HTML과 XML 파일을 파싱하기 위해 사용되는 라이브러리입니다. 뉴스 기사 웹 페이지에서 텍스트를 추출할 때 사용.
+Hugging Face Transformers: 사전 훈련된 T5 모델을 사용하여 텍스트 요약.
+
+KoNLPy (Okt): 한국어 자연어 처리를 위한 라이브러리, 명사 추출에 사용.
+
+Scikit-learn: TF-IDF를 이용하여 텍스트에서 키워드를 추출.
+
+re: 정규 표현식을 사용하기 위한 라이브러리로, 텍스트 처리에 사용.
+
 ```
 import streamlit as st
 import requests
-import json
 from bs4 import BeautifulSoup
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
+from konlpy.tag import Okt
+from sklearn.feature_extraction.text import TfidfVectorizer
+import re
+
 ```
 
 API 키 설정
