@@ -1,7 +1,7 @@
 # 📰News_Summarizer
 
 
- :one:Project Introduction 
+ 💡Project Introduction 
 -------------
 
 
