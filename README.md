@@ -6,14 +6,14 @@
 
 ![image](day1_codes/README_PIC.png)
 
-✔뉴스 기사 내용 요약 및 핵심 키워드 자동 생성 모델 제작, Streamlit 기반 UI 구현
+✔Produces a summary of news articles and automatically generates key keywords, and implements a Streamlit-based UI
 
 
 🌏Development Environment
 -------------
 
 
-✔뉴스 모델 제작
+✔News Model Development
 
 -Jupyter Notebook
 
@@ -21,7 +21,7 @@
 
 -Python
 
-✔UI 구현
+✔UI Implementation
 
 -Streamlit
 
@@ -34,35 +34,35 @@
 -------------
 
 
-•뉴스 카테고리 선택: 경제, IT, 과학, 사회, 문화, 스포츠, 건강
+•Select News Category: Economy, IT, Science, Society, Culture, Sports, Health
 
 
-•선택된 카테고리의 인기 뉴스 기사 5개 수집
+•Collect 5 popular news articles from selected categories
 
 
-•각 기사의 요약 생성
+•Generating a summary of each article
 
 
-•각 기사의 핵심 키워드 추출
+•Extract the key keywords for each article
 
 
-•Ollam를 사용하여 기사 요약과 번역을 진행
+•Use Ollama to summarize and translate articles
 
 
-•결과 시각화(출력)
+•Visualize Results (Output)
 
 
 👾Model Realization
 -------------
 
 
-•사용자가 카테고리를 선택하고 결과를 확인할 수 있는 웹 또는 모바일 인터페이스를 설계
+•Design a web or mobile interface that allows users to select categories and view results
 
 
-•apa: 뉴스 기사 요약 및 핵심 키워드 추출
+•apa: Summarize news articles and extract key keywords
 
 
-•apf: Ollama를 이용하여 뉴스 요점 정리
+•apf: Use Ollama to summarize news points
 
 
 💻Architecture
@@ -73,44 +73,44 @@
 
 •Source
 
--네이버 뉴스 API (free for 25k requests)
+-Naver News API (free for 25k requests)
 
 -Ollama API
 
 ### ✔News Analyzer
 
-•html.paser: 구문 분석
+•html.paser: parsing
 
 ### ✔News Summarizer
 
 
-•한국어 Tokenizer: 텍스트 -> 문장 분리
+•Korean Tokenizer: text -> sentence separation
 
-•Huggingface 뉴스 요약 모델 사용
+•Huggingface: Using the News Summary Model
 
--t5-base 모델을 로드하여 한국어 텍스트 요약
+-Korean text summary by loading t5-based model
 
 
 ### ✔Keyword Extractor
 
-•Okt(Open Korean Text): 텍스트에서 핵심 키워드 추출
+•Okt(Open Korean Text): Extract key keywords from text
 
 ### ✔UI Implementation
 
-•konlpy를 사용하여 streamlit으로 웹페이지 구현
+•Implement Web pages in streamlit using Konlpy
 
-•ollama로 새로 작성한 코드로 streamlit으로 웹페이지 구현 -> 성능 향상
+•Implement web pages with streamlit with newly written code with ollama -> Improve performance
 
 
 🧗‍♀️Future Work
 -------------
 
-•가끔씩 관련 없는 뉴스가 나오는 오류 해결하기  
+•Troubleshooting Occasional Unrelated News
 
-•apa 코드 사용시 중간에 종종 발생하는 요약 오류 해결하기
+•Troubleshoot summary errors that often occur in the middle of using the apa code
 
-•Ollama를 이용하여 뉴스의 핵심 키워드까지 추출하기
+•Use Ollama to extract even the core keywords of the news
 
-•사용자만이 웹페이지에 들어갈 수 있다는 단점 해결하기
+•Solve the disadvantage that only users can enter web pages
 
-•뉴스 요약 추출 시간 단축하기
+•Shorten news summary extraction time
