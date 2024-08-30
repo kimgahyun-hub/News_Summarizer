@@ -99,7 +99,7 @@
 
 •Implement Web pages in streamlit using Konlpy
 
-•Implement web pages with streamlit with newly written code with ollama -> Improve performance
+•Implement web pages with streamlit with newly written code with Ollama -> Improve performance
 
 
 🧗‍♀️Future Work
