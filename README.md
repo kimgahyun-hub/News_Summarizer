@@ -9,7 +9,7 @@
 뉴스 기사 내용 요약 및 핵심 키워드 자동 생성 모델 제작, Streamlit 기반 UI 구현
 
 
-2️⃣Development Environment
+🌏Development Environment
 -------------
 
 
