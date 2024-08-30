@@ -31,7 +31,7 @@
 
 
 
-:shipit:Key features
+Key features
 -------------
 
 
