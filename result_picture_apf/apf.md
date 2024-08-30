@@ -13,6 +13,8 @@ Useage
 이 사이트 참고하여 llama3.1을 실행한다
         Ollama github : <https://github.com/ollama/ollama>
 
+윈도우 사용시 PowerShell에서 실행한다
+
 pc상에서 ollama 시작(여기서 llama3.1:8b 버전 사용):
   
     ollama run llama3.1:3b
