@@ -7,14 +7,12 @@ News_Summarizer
 -------------
 
 필요한 Python 패키지를 설치합니다. 
-'''
-pip install streamlit
+'''pip install streamlit
 pip install requests
 pip install beautifulsoup4
 pip install transformers
 pip install konlpy
-pip install scikit-learn
-'''
+pip install scikit-learn'''
 
 Streamlit 앱 실행
 -------------
