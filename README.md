@@ -27,7 +27,7 @@
 
 -Java
 
-➖Ollama
+-Ollama
 
 
 
