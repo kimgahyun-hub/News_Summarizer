@@ -4,7 +4,7 @@
  💡Project Introduction 
 -------------
 
-![image](https://github.com/user-attachments/assets/5b4bbb52-7229-41c9-afcc-10029cbcce9a)
+![image](day1_codes/README_PIC.png)
 
 뉴스 기사 내용 요약 및 핵심 키워드 자동 생성 모델 제작, Streamlit 기반 UI 구현
 
