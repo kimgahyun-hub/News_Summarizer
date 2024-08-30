@@ -299,6 +299,41 @@ st.write(f"발행일: {pub_date}")
 st.write("---")
 ```
 
+오류 처리 및 예외 처리
+-------------
+
+오류가 발생했을시 오류 확인을 위한 코드 구현
+
+### 예시
+
+```
+if inside_braces == 0 and current_json.strip():
+        try:
+            json_objects.append(json.loads(current_json)) #변역된 결과 출력 부분
+        except json.JSONDecodeError:
+            st.error(f"Error decoding JSON: {current_json}")
+        current_json = ''
+
+try: #뉴스 기사에서 텍스트 추출 부분
+        response = requests.get(url)
+        if response.status_code != 200:
+            st.error(f"웹 페이지를 가져오는 데 실패했습니다. 상태 코드: {response.status_code}")
+            return ""
+        soup = BeautifulSoup(response.content, 'html.parser')
+        for script_or_style in soup(['script', 'style']):
+            script_or_style.decompose()
+        text = soup.get_text(separator=' ')
+        text = ' '.join(text.split())
+        return text
+    except requests.exceptions.RequestException as e:
+        st.error(f"요청 중 오류 발생: {str(e)}")
+        return ""
+```
+
+보완해야 할 부분
+-------------
+
+1.
 
 
 
