@@ -57,13 +57,13 @@
 -apf: Ollama를 이용하여 뉴스 요점 정리
 
 
-Architecture
+💻Architecture
 ------------
 
 
 ### News Crawler
 
-• Source
+✔ Source
 
 -네이버 뉴스 API (free for 25k requests)
 
@@ -71,25 +71,25 @@ Architecture
 
 ### News Analyzer
 
-• html.paser: 구문 분석
+✔ html.paser: 구문 분석
 
 ### News Summarizer
 
-• 한국어 Tokenizer: 텍스트 -> 문장 분리
+✔ 한국어 Tokenizer: 텍스트 -> 문장 분리
 
-• Huggingface 뉴스 요약 모델 사용
+✔ Huggingface 뉴스 요약 모델 사용
 
--t5-base 모델을 로드하여 한국어 텍스트 요약
+✔ t5-base 모델을 로드하여 한국어 텍스트 요약
 
 ### Keyword Extractor
 
-• Okt(Open Korean Text) & TfidfVectorizer: 텍스트에서 핵심 키워드 추출
+✔ Okt(Open Korean Text) & TfidfVectorizer: 텍스트에서 핵심 키워드 추출
 
 ### UI Implementation
 
-• konlpy를 사용하여 streamlit으로 웹페이지 구현
+✔ konlpy를 사용하여 streamlit으로 웹페이지 구현
 
-• ollama로 새로 작성한 코드로 streamlit으로 웹페이지 구현 -> 성능 향상
+✔ ollama로 새로 작성한 코드로 streamlit으로 웹페이지 구현 -> 성능 향상
 
 
 🧗‍♀️Future Work
