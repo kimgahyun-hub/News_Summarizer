@@ -1,7 +1,7 @@
 News_Summarize Use Ollama
 =============
 
-![image](./image/apf3.png)
+![image](./apf3.png)
 
 Streamlit이라는 파이썬 웹 애플리케이션 프레임워크를 사용하여 뉴스 기사를 검색하고, 해당 기사 내용을 요약하고 번역을 Ollama의 llama3.1을 이용하여 진행
 
