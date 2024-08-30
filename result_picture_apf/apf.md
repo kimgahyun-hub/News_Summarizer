@@ -30,7 +30,7 @@ http://localhost:11434 주소에서 실행 중인지 확인
 
 Oracle Java : <https://www.oracle.com/kr/java/technologies/downloads/>
 
-최신 버전의 맞는 os용 Installer를 설치하여 Java 설치
+최신 버전의 맞는 os용 Installer를 설치하여 Java 설치 (현재 최신 버전 : 22.0.2)
 
 필요한 라이브러리
 -------------
